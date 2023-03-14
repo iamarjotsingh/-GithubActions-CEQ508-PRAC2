@@ -1,7 +1,7 @@
 import os
 
-ValueA = os.environ['valueA']
-ValueB = os.environ['valueB']
+ValueA = os.environ['INPUT_STORE']
+ValueB = os.environ['INPUT_STORE']
 
 multiply = ValueA*ValueB
 
