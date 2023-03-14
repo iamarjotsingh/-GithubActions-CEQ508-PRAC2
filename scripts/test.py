@@ -3,8 +3,8 @@ import os
 ValueA = os.environ['INPUT_STORE']
 ValueB = os.environ['INPUT_STORE']
 
-multiply = ValueA*ValueB
+attach = ValueA+ValueB
 
 
 print("Values of A and B:", ValueA,ValueB)
-print("Multiply of A and B", multiply)
+print("Attaching A and B", attach)

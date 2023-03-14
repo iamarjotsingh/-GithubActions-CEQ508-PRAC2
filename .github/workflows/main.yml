@@ -37,23 +37,23 @@ name: AMAR WORKFLOW
 
 on:
   
-  # push:
-  #   branches: [ "master" ]
+  push:
+    branches: [ "master" ]
 
-  workflow_call:
+  workflow_dispatch:
     inputs:
       ValueA:
         description: 'Value of A'
         required: true
         default: '1'
-        type: number
+        
         
 
       ValueB:
         description: 'Value of B'
         required: true
         default: '1'
-        type: number
+        
         
 
   
@@ -79,7 +79,6 @@ jobs:
 
       
       
-#       # python scripts/thon.py 3 5
       
             
    
