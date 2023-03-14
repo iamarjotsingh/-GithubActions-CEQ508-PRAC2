@@ -28,14 +28,14 @@ jobs:
     name: Python Values
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10' 
-    - run: |
-        echo "a: ${{ github.event.inputs.ValueA }}"
-        echo "b: ${{ github.event.inputs.ValueB }}"
-        a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python scripts/thon.py
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - run: |
+          echo "a: ${{ github.event.inputs.ValueA }}"
+          echo "b: ${{ github.event.inputs.ValueB }}"
+          a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python scripts/thon.py
     
    
     
