@@ -1,0 +1,39 @@
+
+
+name: AMAR WORKFLOW
+
+on:
+  
+  push:
+    branches: [ "master" ]
+
+  workflow_call:
+    inputs:
+      ValueA:
+        description: 'Value of A'
+        required: true
+        default: '1'
+        type: number
+
+      ValueB:
+        description: 'Value of B'
+        required: true
+        default: '1'
+        type: number
+
+  
+jobs:
+
+  my_job:
+    name: Python Values
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - run: python scripts/intro.py ${{ inputs.ValueA }}
+    - run: python scripts/intro.py ${{ inputs.ValueB }} 
+    
+   
+    
