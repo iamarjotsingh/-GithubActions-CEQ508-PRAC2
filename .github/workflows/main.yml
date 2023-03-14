@@ -7,18 +7,18 @@ on:
   push:
     branches: [ "master" ]
 
-  # workflow_dispatch:
-  #   inputs:
-  #     ValueA:
-  #       description: 'Value of A'
-  #       required: true
-  #       default: '1'
+  workflow_dispatch:
+    inputs:
+      ValueA:
+        description: 'Value of A'
+        required: true
+        default: '1'
         
 
-  #     ValueB:
-  #       description: 'Value of B'
-  #       required: true
-  #       default: '1'
+      ValueB:
+        description: 'Value of B'
+        required: true
+        default: '1'
         
 
   
@@ -32,12 +32,17 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
-      - run: python scripts/thon.py 3 5
-      
-          #   |
-          # echo "a: ${{ github.event.inputs.ValueA }}"
-          # echo "b: ${{ github.event.inputs.ValueB }}"
-          # a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python scripts/thon.py
+      - run: |
+          echo "a: ${{ github.event.inputs.ValueA }}"
+          echo "b: ${{ github.event.inputs.ValueB }}"
+          a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python scripts/thon.py
     
+
+
+      
+      
+      # python scripts/thon.py 3 5
+      
+            
    
     
