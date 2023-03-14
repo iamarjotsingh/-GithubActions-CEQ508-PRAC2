@@ -35,7 +35,7 @@ jobs:
     - run: |
         echo "a: ${{ github.event.inputs.ValueA }}"
         echo "b: ${{ github.event.inputs.ValueB }}"
-        a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python thon.py
+        a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python scripts/thon.py
     
    
     
