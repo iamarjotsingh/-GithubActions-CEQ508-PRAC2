@@ -7,4 +7,4 @@ attach = Value+Value
 
 
 
-print("Attaching A and B", attach)
+print("Attaching ValueA and ValueB", attach)
