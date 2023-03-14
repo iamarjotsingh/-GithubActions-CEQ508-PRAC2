@@ -70,7 +70,7 @@ jobs:
           python-version: 3.8
   
       - name: Execute Test Script
-        run: INPUT_STORE=${{ github.event.inputs.ValueA }} ${{ github.event.inputs.ValueB }} python3 scripts/test.py
+        run: INPUT_STORE=${{ github.event.inputs.ValueA }}${{ github.event.inputs.ValueB }} python3 scripts/test.py
 
 
       
