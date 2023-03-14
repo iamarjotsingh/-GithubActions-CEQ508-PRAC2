@@ -32,8 +32,8 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10' 
-    - run: python scripts/intro.py ${{ inputs.ValueA }}
-    - run: python scripts/intro.py ${{ inputs.ValueB }} 
+    - run: python scripts/thon.py ${{ inputs.ValueA }},${{ inputs.ValueB }}
+   
     
    
     
