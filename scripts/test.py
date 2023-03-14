@@ -1,5 +1,10 @@
 import os
 
-input_variable = os.environ['INPUT_STORE']
+ValueA = os.environ['INPUT_STORE']
+ValueB = os.environ['valueB']
 
-print("Input Variable:", input_variable)
+multiply = ValueA*ValueB
+
+
+print("Values of A and B:", ValueA,ValueB)
+print("Multiply of A and B", multiply)

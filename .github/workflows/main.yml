@@ -1,14 +1,60 @@
-name: Test Python Input
+# name: Test Python Input
+
+# on:
+   
+#    workflow_dispatch:
+#      inputs:
+#        myInput:
+#          description: 'User Input:'
+#          required: true
+#          default: "Hello World"
+
+
+# env:
+
+
+     
+
+# jobs:
+#   run-python-test:
+#     runs-on: ubuntu-latest
+#     steps:
+  
+#       - name: Checkout
+#         uses: actions/checkout@v2.3.4
+  
+#       - name: Setup Python
+#         uses: actions/setup-python@v2.2.2
+#         with:
+#           python-version: 3.8
+  
+#       - name: Execute Test Script
+#         run: |
+#           echo "Store: ${{ github.event.inputs.myInput }}"
+#           INPUT_STORE=${{ github.event.inputs.myInput }} python3 scripts/test.py
+
+name: AMAR WORKFLOW
 
 on:
-   push:
-   workflow_dispatch:
-     inputs:
-       myInput:
-         description: 'User Input:'
-         required: true
-         default: "Hello World"
+  
+  # push:
+  #   branches: [ "master" ]
 
+  workflow_dispatch:
+    inputs:
+      ValueA:
+        description: 'Value of A'
+        required: true
+        default: '1'
+        
+
+      ValueB:
+        description: 'Value of B'
+        required: true
+        default: '1'
+        
+
+  
 jobs:
   run-python-test:
     runs-on: ubuntu-latest
@@ -24,46 +70,8 @@ jobs:
   
       - name: Execute Test Script
         run: |
-          echo "Store: ${{ github.event.inputs.myInput }}"
-          INPUT_STORE=${{ github.event.inputs.myInput }} python3 scripts/test.py
-
-# name: AMAR WORKFLOW
-
-# on:
-  
-#   push:
-#     branches: [ "master" ]
-
-#   workflow_dispatch:
-#     inputs:
-#       ValueA:
-#         description: 'Value of A'
-#         required: true
-#         default: '1'
-        
-
-#       ValueB:
-#         description: 'Value of B'
-#         required: true
-#         default: '1'
-        
-
-  
-# jobs:
-
-#   my_job:
-#     name: Python Values
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-python@v4
-#         with:
-#           python-version: '3.10' 
-#       - run: |
-#           echo "a: ${{ github.event.inputs.ValueA }}"
-#           echo "b: ${{ github.event.inputs.ValueB }}"
-#           a=${{ github.event.inputs.ValueA }},b=${{ github.event.inputs.ValueB }} python scripts/thon.py
-    
+          echo "Store: Value of A = ${{ github.event.inputs.ValueA }}, Value of B = ${{ github.event.inputs.ValueB }}"
+          ValueA=${{ github.event.inputs.valueA }},ValueB=${{ github.event.inputs.valueB }} python3 scripts/test.py
 
 
       
