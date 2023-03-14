@@ -7,4 +7,4 @@ Value = os.environ['INPUT_STORE']
 
 
 
-print("Attaching ValueA and ValueB", Value)
+print("Attaching ValueA and ValueB = ", Value)
