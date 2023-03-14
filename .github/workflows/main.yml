@@ -71,7 +71,7 @@ jobs:
       - name: Execute Test Script
         run: |
           echo "Store: Value of A = ${{ github.event.inputs.ValueA }}, Value of B = ${{ github.event.inputs.ValueB }}"
-          ValueA=${{ github.event.inputs.valueA }},ValueB=${{ github.event.inputs.valueB }} python3 scripts/test.py
+          ValueA=${{ github.event.inputs.ValueA }},ValueB=${{ github.event.inputs.ValueB }} python3 scripts/test.py
 
 
       
