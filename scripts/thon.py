@@ -1,4 +1,8 @@
-a= int(input("Enter value"))
-b= int(input("Enter value"))
-c=a*b
-print("Result = ",c)
+import os
+
+
+
+a= os.int(input("Enter value"))
+b= os.int(input("Enter value"))
+
+print("Result = ",a*b)
