@@ -40,18 +40,20 @@ on:
   # push:
   #   branches: [ "master" ]
 
-  workflow_dispatch:
+  workflow_call:
     inputs:
       ValueA:
         description: 'Value of A'
         required: true
         default: '1'
+        type: number
         
 
       ValueB:
         description: 'Value of B'
         required: true
         default: '1'
+        type: number
         
 
   
@@ -62,6 +64,7 @@ jobs:
   
       - name: Checkout
         uses: actions/checkout@v2.3.4
+        
   
       - name: Setup Python
         uses: actions/setup-python@v2.2.2
@@ -71,7 +74,7 @@ jobs:
       - name: Execute Test Script
         run: |
           echo "Store: Value of A = ${{ github.event.inputs.ValueA }}, Value of B = ${{ github.event.inputs.ValueB }}"
-          INPUT_STORE=${{ github.event.inputs.ValueA }},NPUT_STORE=${{ github.event.inputs.ValueB }} python3 scripts/test.py
+          INPUT_STORE=${{ github.event.inputs.ValueA }},INPUT_STORE=${{ github.event.inputs.ValueB }} python3 scripts/test.py
 
 
       
