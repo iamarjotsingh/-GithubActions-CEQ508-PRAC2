@@ -41,16 +41,16 @@ on:
   workflow_dispatch:
     inputs:
       ValueA:
-        description: 'Value of A'
+        description: 'First Name'
         required: true
-        default: '1'
+        default: '--'
         
         
 
       ValueB:
-        description: 'Value of B'
+        description: 'Last Name'
         required: true
-        default: '1'
+        default: '--'
         
         
 
@@ -70,9 +70,7 @@ jobs:
           python-version: 3.8
   
       - name: Execute Test Script
-        run: |
-          echo "Store: Value of A = ${{ github.event.inputs.ValueA }}, Value of B = ${{ github.event.inputs.ValueB }}"
-          INPUT_STORE=${{ github.event.inputs.ValueA }},INPUT_STORE=${{ github.event.inputs.ValueB }} python3 scripts/test.py
+        run: INPUT_STORE=${{ github.event.inputs.ValueA }},${{ github.event.inputs.ValueB }} python3 scripts/test.py
 
 
       
