@@ -1,9 +1,9 @@
 import os
 
-ValueA = os.environ['INPUT_STORE']
-ValueB = os.environ['INPUT_STORE']
+Value = os.environ['INPUT_STORE']
+# ValueB = os.environ['INPUT_STORE']
 
-attach = ValueA+ValueB
+attach = Value+Value
 
 
 
